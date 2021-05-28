@@ -17,7 +17,7 @@ class Qualean:
             self.user_input=user_input
         else:                           # if no user's input then a random choice is made from [-1,0,1]
             self.user_input=random.choice([-1,0,1])
-        self.number = round((self.user_input*random.uniform(-1, 1)),10) #storing the number in Qualean format.
+        self.number = round(float(Decimal((self.user_input*random.uniform(-1, 1)))),10) #storing the number in Qualean format.
     def return_qualean(self): # function returns the qualean number of the instance.
         return self.number
     def __bool__(self): #function returns the bool value of qualean.number.
